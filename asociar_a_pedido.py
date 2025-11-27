@@ -105,11 +105,6 @@ class AsociarAPedido:
                                          5
                                          )
 
-    def _asociar_documento(self):
-        # comprobar relacion de pedidos
-        # agregar documento
-        pass
-
     def _columnas_tabla(self):
         return [
             {"text": "Folio", "stretch": False, 'width': 100, 'column_anchor': tk.W, 'heading_anchor': tk.W,
@@ -197,3 +192,8 @@ class AsociarAPedido:
             valores = self._ventanas.procesar_fila_treeview('tvw_tabla1', fila)
             comentarios = valores['CommentsOrder']
             self._ventanas.insertar_input_componente('txt_comentario', comentarios)
+
+    def _asociar_documento(self):
+        # comprobar relacion de pedidos
+        # agregar documento
+        pass
