@@ -1,16 +1,15 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+import ttkbootstrap as ttk
+from asociar_a_pedido import AsociarAPedido
+from cayal.parametros_contpaqi import ParametrosContpaqi
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    ventana = ttk.Window()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    parametros = ParametrosContpaqi()
+    parametros.id_usuario = 64
+    parametros.id_principal = 285387
+    parametros.id_modulo = 21
+
+    _= AsociarAPedido(ventana, parametros)
+    ventana.mainloop()
